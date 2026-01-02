@@ -157,12 +157,12 @@ export default function CommitGen() {
                   git diff / git diff --cached
                 </code>
               </div>
-              <div className="p-4 min-h-[400px]">
+              <div className="p-4 min-h-100">
                 <textarea
                   value={gitDiff}
                   onChange={(e) => setGitDiff(e.target.value)}
                   onKeyDown={handleKeyPress}
-                  className="w-full h-[400px] bg-transparent border-none focus:ring-0 text-sm font-mono text-slate-700 dark:text-slate-400 resize-none leading-relaxed outline-none scrollbar-hide placeholder:text-slate-400 dark:placeholder:text-slate-600"
+                  className="w-full h-100 bg-transparent border-none focus:ring-0 text-sm font-mono text-slate-700 dark:text-slate-400 resize-none leading-relaxed outline-none scrollbar-hide placeholder:text-slate-400 dark:placeholder:text-slate-600"
                   placeholder="paste your git diff here... Example: diff --git a/src/main.js b/src/main.js ..."
                 />
               </div>
