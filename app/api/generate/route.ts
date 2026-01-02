@@ -15,6 +15,8 @@ export async function POST(request: NextRequest) {
     const apiKey = process.env.GEMINI_API_KEY;
 
     if (!apiKey) {
+      console.error("CRITICAL: GEMINI_API_KEY is not set!");
+      console.error("Available env vars:", Object.keys(process.env));
       return NextResponse.json(
         {
           error:
@@ -32,7 +34,6 @@ export async function POST(request: NextRequest) {
         topP: 0.95,
         topK: 40,
         maxOutputTokens: 2048,
-        responseMimeType: "application/json",
       },
     });
 

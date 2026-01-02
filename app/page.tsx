@@ -63,7 +63,7 @@ export default function CommitGen() {
 
       setResult(data);
     } catch (err: any) {
-      setError(err.message || "An error occurred");
+      setError("AI Service not available");
     } finally {
       setLoading(false);
     }
